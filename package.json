@@ -1,0 +1,20 @@
+{
+  "name": "hernan-cresple-scraping",
+  "version": "1.0.0",
+  "description": "Various scripts to fetch football data",
+  "scripts": {
+    "coverage": "nyc npm run test",
+    "test": "ENV=test ava -v -s"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.12",
+    "mongodb": "^6.1.0",
+    "yargs": "^17.7.2"
+  },
+  "devDependencies": {
+    "ava": "^5.3.1",
+    "nyc": "^15.1.0"
+  }
+}
