@@ -1,0 +1,15 @@
+#!/usr/bin/env node
+
+console.log(`Using version="${require('../package.json').version}"`)
+
+process.env.npm_package_name = process.env.npm_package_name || require('../package.json').name
+process.env.npm_package_version = process.env.npm_package_version || require('../package.json').version
+
+/* eslint-disable no-unused-expressions */
+
+require('yargs')
+  .commandDir('../commands')
+  .demandCommand()
+  .strict()
+  .help()
+  .argv
