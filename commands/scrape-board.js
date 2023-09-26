@@ -1,3 +1,4 @@
+const { scrapeBoard } = require('../lib/scrape-board')
 const { parseStartSeason, parseEndSeason } = require('../lib/utils/parse-input-data')
 
 module.exports = {
@@ -36,7 +37,7 @@ module.exports = {
     for (const season of seasons) {
       for (const league of leagues) {
         console.log(`Started scraping league: ${league}, season: ${season}/${season + 1}`)
-        // Where the actual scraping will happen
+        await scrapeBoard({ league, season })
         console.log(`Finished scraping all teams from league: ${league}, season: ${season}/${season + 1}`)
       }
     }
