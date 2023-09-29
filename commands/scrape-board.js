@@ -32,7 +32,7 @@ module.exports = {
 
     if (startSeason > endSeason) throw new Error('startSeason can\'t be higher than endSeason')
 
-    const seasons = (Array.from(Array(endSeason - startSeason).keys())).map(v => v + startSeason).reverse()
+    const seasons = [...Array(endSeason - startSeason).keys()].map(v => v + startSeason).reverse()
 
     for (const season of seasons) {
       for (const league of leagues) {
